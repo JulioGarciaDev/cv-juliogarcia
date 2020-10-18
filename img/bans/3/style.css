@@ -1,0 +1,247 @@
+body { margin: 0px; padding: 0px; background-color: transparent; }
+/* div { position: absolute } */
+.ad_size { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+
+#content, #main, #whiteout, #border, #clicktag {
+    position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;
+}
+
+#whiteout { background-color: black; }
+#plinth { background-size: contain; background-image: url("logo.png"); }
+
+#border { box-sizing: border-box; border: 1px solid #102b4e; }
+
+#content {
+    background-color: black;
+    overflow: hidden;
+    /* perspective: 1000px; */
+}
+
+
+
+.image {
+    transform: translate3d(0px, 0px, 0px) scale(1) rotate(0.01deg);
+    transform-origin: top left;
+    position: absolute; top: 0px; left: 0px;
+    width: auto; height: auto;
+    
+    /* scale blur bugFix */
+    /* backface-visibility: hidden;
+    -webkit-filter: blur(0); */
+}
+
+
+#bg_1, #bg_2 {
+    top: -5%;
+    left: -5%;
+    transform: translate3d(0px, 0px, 0px) scale(0.9) rotate(0.01deg);
+    transform-origin: center center;
+}
+
+#svgLine {
+    transform-origin: left top;
+    position: absolute;
+    top: 28px;
+    left: -92px;
+    transform: translate3d(6px,0,0) scale(0.48);
+    transform-origin: center center;
+}
+
+
+#copy_legal_wrap {
+overflow: hidden;
+    transform: translate3d(0px, 0px, 0px) scale(0.5) rotate(0.01deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 219px;
+    left: 0px;
+    width: 600px;
+    height: 47px;
+
+}
+
+
+/* ------------------------------ CTA - Start ----------------------------- */
+
+.cta_position {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: contain;
+}
+
+#cta_1 {
+    background-image: url("cta_1.png");
+}
+#cta_2 {
+    opacity: 0;
+    background-image: url("cta_2.png");
+}
+
+/* ------------------------------ CTA - End ----------------------------- */
+
+/* ------------------------------ Terms - Start ----------------------------- 
+
+/*#terms_btn {
+    position: absolute; background-color: aqua; opacity: 0;
+    pointer-events: none; cursor: pointer;
+    top: 3px; left: 3px;
+    width: 21px; height: 21px;
+}
+
+#terms_btn_2 {
+    position: absolute; background-color: aqua; opacity: 0;
+    cursor: pointer;
+    top: 35px; left: 235px;
+    width: 21px; height: 21px;
+}
+
+#terms_close_btn  {
+    position: absolute; background-color: aqua; opacity: 0;
+    display: none; cursor: pointer;
+    top: 6px; right: 6px;
+    width: 37px; height: 37px;
+}
+
+#terms_copy {
+    position: absolute; background-size: contain;
+    background-image: url("terms_copy.png");
+}
+
+#terms_overlay {
+    position: absolute; background-size: contain; opacity: 0;
+    background-color: rgba(0,0,0,0.7);
+    top: 0px; left: 0px;
+}
+
+@keyframes terms_overlay_animation_over {from {opacity: 0} to {opacity: 1} }
+@keyframes terms_overlay_animation_out {from {opacity: 1} to {opacity: 0} }
+
+/* ------------------------------ Terms - End ----------------------------- */
+
+
+/* svg lines bg */
+
+#svgBg_all {
+    transform: scale(0.57);
+    top: 61px;
+    position: absolute;
+}
+
+#svgFloorWrapper {
+    left: -185px;
+    top: -5px;
+    position: absolute;
+    filter: saturate(1.1);
+}
+
+#svgBgWrapper {
+    opacity: 0;
+    filter: blur(1.2px) saturate(1.1);
+ }
+ 
+ .imagesSVG {
+     width: 1024px; height: 126px;
+     opacity: 0; top: 50px;
+ }
+ 
+ #bg01 {
+     background-image: url('svg/bg01.svg');
+ }
+ 
+ #bg02 {
+     background-image: url('svg/bg02.svg');
+ }
+ 
+ #bg03 {
+     background-image: url('svg/bg03.svg');
+     height: 130px;
+ }
+ 
+ #bg04 {
+     background-image: url('svg/bg04.svg');
+     height: 134px;
+ }
+ 
+ #bg05 {
+     background-image: url('svg/bg05.svg');
+     height: 133px;
+ }
+ 
+ #bg06 {
+     background-image: url('svg/bg06.svg');
+     height: 137px;
+ }
+ 
+ #bg07 {
+     background-image: url('svg/bg07.svg');
+     height: 133px;
+ }
+ 
+ #bg08 {
+     background-image: url('svg/bg08.svg');
+     height: 131px;
+ }
+ 
+ #bg09 {
+     background-image: url('svg/bg09.svg');
+     height: 130px;
+ }
+ 
+ #bg10 {
+     background-image: url('svg/bg10.svg');
+     height: 130px;
+ }
+ 
+ #bgGrad {
+    background-image: url('svg/bg_horse_end.svg');
+    width: 200%; height: 200%;
+    transform: scale(0.5);
+
+    top: 20px;
+    left: 10px;
+}
+
+ #floor, #shadow_floor {
+     background-image: url('svg/floor.svg');
+     height: 139px; top: 200px;
+     transform: scale(0.8);
+ 
+     filter: blur(0.9px);
+
+     opacity: 0;
+ }
+ 
+ #shadow_floor {
+     background-image: url('svg/shadow_floor.svg');
+     height: 150px; filter: blur(none);
+ }
+ 
+
+ /* svg overlay bg */
+ #overlaygradient {
+     background-image: url('svg/overlaygradient.svg');
+     width: 1084px;
+     height: 688px;
+     top: -90px;
+     left: -89px;
+
+     transform: scaleX(0.45) scaleY(0.6);
+    
+     opacity: 0;
+ }
+ 
+ 
+ /* svg mustang */
+ 
+ #svgMustangShape {
+     position: absolute;
+     top: -27px;
+     transform: scale(0.145);
+     left: -324px;
+     filter: blur(1.2px) saturate(2);
+ 
+     opacity: 0;
+}
+ 
+
+ 

@@ -1,0 +1,167 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+/* div { position: absolute } */
+.ad_size {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#content,
+#main,
+#whiteout,
+#border,
+#clicktag {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#whiteout {
+    background-color: black;
+}
+
+#plinth {
+    background-size: contain;
+}
+
+#border {
+    box-sizing: border-box;
+    border: 1px solid #102b4e;
+}
+
+#content {
+    background-color: white;
+    overflow: hidden;
+    /* perspective: 1000px; */
+}
+
+
+
+.image {
+    transform: translate3d(0px, 0px, 0px) scale(1) rotate(0.01deg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+
+    /* scale blur bugFix */
+    /* backface-visibility: hidden;
+    -webkit-filter: blur(0); */
+}
+
+
+/*
+#bg_1 {
+    top: 0%;
+    left: 0%;
+    transform: translate3d(0px, 0px, 0px) scale(1) rotate(0.01deg);
+}
+*/
+
+
+
+/* ------------------------------ CTA - Start ----------------------------- */
+
+#cta_all {
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+
+    transform: rotate(0.001deg) scale(0.5);
+    transform-origin: bottom left;
+}
+
+.cta_position {
+    width: auto;
+    height: auto;
+    position: absolute;
+}
+
+#cta_1 {
+    color: #ffffff;
+    backface-visibility: hidden;
+}
+
+#cta_2 {
+    color: #102b4e;
+    backface-visibility: hidden;
+    opacity: 0;
+}
+
+#cta_1_bg {
+    background-color: #102b4e;
+    width: 100%;
+    height: 100%;
+}
+
+#cta_2_bg {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/* ------------------------------ CTA - End ----------------------------- */
+
+/* ------------------------------ Terms - Start ----------------------------- */
+
+#terms_btn {
+    position: absolute;
+    background-color: aqua;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    top: 303px;
+    left: 25px;
+    width: 74px;
+    height: 14px;
+}
+
+#terms_copy {
+    position: absolute;
+    background-size: contain;
+    /* background-image: url("terms_copy.png"); */
+}
+
+#terms_overlay {
+    position: absolute;
+    background-size: contain;
+    opacity: 0;
+    /*    background-color: rgba(0,0,0,0.8);*/
+    top: 0px;
+    left: 0px;
+}
+
+@keyframes terms_overlay_animation_over {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes terms_overlay_animation_out {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+/* ------------------------------ Terms - End ----------------------------- */

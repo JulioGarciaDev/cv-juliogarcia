@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="ad.size" content="width=300,height=250">
+    <title>2009_CCL_FCSD_CV_N_LC_N_S_300X250_N_nl_NL</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.5_23b0de6da0ee295131e32a500470610c_min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+
+<script>
+    var clickTag = "https://www.google.com";
+
+    // DoubleClick Select
+    var dcSelect = false;
+
+    // DoubleClick Polite Load Select
+    var politeLoad = true;
+</script>
+
+</head>
+
+
+<body>
+
+<div class="stopwatch" style="opacity: 0"></div> 
+<div id="content" style="display: none">
+
+    <div id="main"></div>
+
+    <div id="terms_copy" class="ad_size"></div>
+    <div id="terms_overlay" class="ad_size"></div>
+
+    <div id="whiteout" class="ad_size"></div>
+    <div id="plinth" class="ad_size"></div>
+
+    <div id="cta_wrapper">
+        <div id="cta_all">
+            <div id="cta_1_bg" class="cta_position"></div>
+            <div id="cta_2_bg" class="cta_position"></div>
+            <img src="cta_1.png" id="cta_1" class="cta_position">
+        </div>
+    </div>
+
+    <div id="border"></div>
+
+    <a href="javascript: void(0);" onclick="javascript: clicktag_Click();">
+        <div id="clicktag" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"></div>
+    </a>
+
+    <div id="terms_btn" onclick="termsEnter()" onmouseenter="termsEnter()" onmouseleave="termsLeave()"></div>
+
+</div>
+
+    <script>
+
+    // cta autoadjusting ------------------------------------------------------------ start
+
+    //cta size - this make possible positioning the cta from the bottom as usuall
+    const cta_all = document.getElementById("cta_all");
+    const cta_1 = document.getElementById("cta_1");
+
+    cta_1.setAttribute("src", "cta_1.png");
+
+    cta_1.onload = function () {
+        cta_all.style.height = cta_1.naturalHeight + "px";
+        cta_all.style.width = cta_1.naturalWidth + "px";
+    }
+
+
+
+    // cta autoadjusting ------------------------------------------------------------ end
+    </script>
+
+<script>
+    "use strict";var _createClass=function(){function t(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}return function(e,i,n){return i&&t(e.prototype,i),n&&t(e,n),e}}();function _classCallCheck(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}var Stopwatch=function(){function t(e,i){_classCallCheck(this,t),this.running=!1,this.display=e,this.results=i,this.laps=[],this.reset(),this.print(this.times)}return _createClass(t,[{key:"reset",value:function(){this.times=[0,0,0]}},{key:"start",value:function(){this.time||(this.time=performance.now()),this.running||(this.running=!0,requestAnimationFrame(this.step.bind(this)))}},{key:"lap",value:function(){var t=this.times,e=document.createElement("li");e.innerText=this.format(t),this.results.appendChild(e)}},{key:"stop",value:function(){this.running=!1,this.time=null}},{key:"step",value:function(t){this.running&&(this.calculate(t),this.time=t,this.print(),requestAnimationFrame(this.step.bind(this)))}},{key:"calculate",value:function(t){var e=t-this.time;this.times[2]+=e/10,this.times[2]>=100&&(this.times[1]+=1,this.times[2]-=100),this.times[1]>=60&&(this.times[0]+=1,this.times[1]-=60)}},{key:"print",value:function(){this.display.innerText=this.format(this.times)}},{key:"format",value:function(t){return pad0(t[0],2)+":"+pad0(t[1],2)+":"+pad0(Math.floor(t[2]),2)}}]),t}();function pad0(t,e){for(var i=t.toString();i.length<e;--e)i="0"+i;return i}function clearChildren(t){for(;t.lastChild;)t.removeChild(t.lastChild)}var stopwatch=new Stopwatch(document.querySelector(".stopwatch"),document.querySelector(".results"));
+</script>
+
+
+</body>
+
+</html>

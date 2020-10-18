@@ -1,0 +1,130 @@
+body { margin: 0px; padding: 0px; background-color: transparent; }
+
+/*div { position: absolute; }*/
+
+.ad_size { width: 100%; height: 100%; top: 0px; left: 0px;}
+
+#content, #main, #whiteout, #plinth, #border, #clicktag {
+    position: absolute; top: 0px; left: 0px;
+}
+
+#whiteout { background-color: black; }
+
+#plinth { background-size: contain; }
+
+#border { border: 1px solid #102b4e; }
+
+#content {
+    background-color: white;
+    overflow: hidden; perspective: 1000px
+}
+
+#main {
+    width: 300px; height: 250px;
+}
+
+.image {
+    transform: translate3d(0px, 0px, 0px) scale(0.5) rotate(0.01deg); /* scale 0.5 retina */
+    transform-origin: top left;
+    position: absolute; top: 0px; left: 0px;
+    width: auto; height: auto;
+}
+
+
+
+#bg {
+    transform: translate3d(0px, 0px, 0px) scale(0.5) rotate(0.01deg);
+    /* transform-origin: center center;  */
+    top: 0; left: 0; position: absolute; backface-visibility: hidden
+}
+
+
+/* ------------------------------ CTA - Start ----------------------------- */
+
+#cta_wrapper {
+    bottom: inherit; left: inherit;
+    width: inherit; height: inherit;
+    transform-origin: 25% 90.4%;
+}
+
+#cta_all {
+    width: inherit; height: inherit; position: absolute;
+    bottom: 9px; left: -32px;
+
+    transform: rotate(0.001deg) scale(0.5);
+    /* transform-origin: bottom left; */
+    transform-origin: center;
+}
+
+.cta_position {
+    width: auto; height: auto; 
+    position: absolute; 
+}
+
+#cta_1 {
+    backface-visibility: hidden;  
+}
+
+#cta_2 {
+    backface-visibility: hidden; 
+    opacity: 0;
+}
+
+#cta_1_bg {
+    background-color: #102b4e;
+    width: inherit; height: inherit;
+}
+
+#cta_2_bg {
+    background-color: #fff;
+    border: #102b4e 1px solid; 
+    box-sizing: border-box;    
+    width: inherit; height: inherit; opacity: 0;
+}
+
+
+
+@keyframes cta_animation_in {
+    0%      {opacity: 0;}
+    75%     {opacity: 1;}
+    100%    {opacity: 1;}
+}
+
+@keyframes cta_animation_out {
+    0%      {opacity: 1;}
+    25%     {opacity: 1;}
+    100%    {opacity: 0;}
+}
+/* ------------------------------ CTA - End ----------------------------- */
+
+/* ------------------------------ Terms - Start ----------------------------- */
+
+#terms_btn {
+    position: absolute; top: 160px; left: 131px;
+    width:10px; height: 10px; opacity: 0;
+    background-color: aqua; cursor: pointer;
+    display: none;
+}
+
+#terms_copy {
+    position: absolute; top: 0px; left: 0px;
+    background-size: contain;
+}
+
+#terms_overlay {
+    position: absolute; top: 0px; left: 0px; opacity: 0;
+    background-size: contain;
+}
+
+@keyframes terms_overlay_animation_over {
+    0%      {opacity: 0;}
+    100%    {opacity: 1;}
+}
+
+@keyframes terms_overlay_animation_out {
+    0%      {opacity: 1;}
+    100%    {opacity: 0;}    
+}
+
+/* ------------------------------ Terms - End ----------------------------- */
+
